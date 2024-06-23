@@ -1,7 +1,7 @@
 // tailwind.config.ts affects how Tailwind CSS generates utility classes and customizes its behavior.
 import type { Config } from "tailwindcss"
 /** @type {import('tailwindcss').Config} */
-import { withUt } from 'uploadthing/tw';
+import { withUt } from 'uploadthing/tw';//plugin helps to upload images in next.js install using npm install uploadthing @uploadthing/react
 
 module.exports = withUt({
   darkMode: ['class'],
