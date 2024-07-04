@@ -76,7 +76,7 @@ export async function POST(req: Request) {
             }
         })
     }
-    return NextResponse.json( {message: 'OK', user: newUser} );
+    return NextResponse.json( {message: 'OK', user: newUser} )
   }
   //Update User
   if(eventType === 'user.updated')//we udpate a user on the database
@@ -92,7 +92,7 @@ export async function POST(req: Request) {
   }
   const updatedUser = await updateUser(id, user); 
 
-    return NextResponse.json( {message: 'OK', user: updatedUser} );
+    return NextResponse.json( {message: 'OK', user: updatedUser} )
   }
   //Delete User
   if(eventType === 'user.deleted')//we delete a user on the database
@@ -100,7 +100,7 @@ export async function POST(req: Request) {
         const {id} = evt.data; 
         const deletedUser = await deleteUser(id!); 
 
-    return NextResponse.json( {message: 'OK', user: deletedUser} );
+    return NextResponse.json( {message: 'OK', user: deletedUser} )
   }
   return new Response('', { status: 200 })
 }

@@ -13,7 +13,7 @@ export const connectToDatabase = async () =>{
     //if we have cached conncetion from above
     //then return the cached connection else create a new mongoose connection
     cached.promise = cached.promise || mongoose.connect(MONGODB_URI, {//here we are connect to already established mongoose connection or create a new one
-        dbName: 'EventPlanner360',
+        dbName: 'evently',
         bufferCommands: false,//disable buffering on all models associated with this connection.
     });
 

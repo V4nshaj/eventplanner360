@@ -1,14 +1,14 @@
 'use server'//user server is a directory. as it is a next js server action file and it will run on the server
 
-import { revalidatePath } from 'next/cache';
+import { revalidatePath } from 'next/cache'
 
-import { connectToDatabase } from "../database";
-import User from "../database/models/user.model";
-import Event from '@/lib/database/models/event.model';
-import { handleError } from "../utils";
+import { connectToDatabase } from "../database"
+import User from "../database/models/user.model"
+import Event from '@/lib/database/models/event.model'
+import { handleError } from "../utils"
 
-import { CreateUserParams, UpdateUserParams } from '@/types';
-import Order from '../database/models/order.model';
+import { CreateUserParams, UpdateUserParams } from '@/types'
+import Order from '../database/models/order.model'
 
 export async function createUser(user: CreateUserParams) {//accepts user data as parameter and tries to create a user in database. We need to define the type of data(i.e. user) we are passing to createUser
   try {
